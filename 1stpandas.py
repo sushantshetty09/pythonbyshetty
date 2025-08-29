@@ -17,5 +17,18 @@ df=pd.DataFrame(data)
 # print(df.dropna())
 
 # print(df.fillna(0))
+# print(df.rename(columns={"name":"full name"},inplace=True))
 
-print(df.rename(columns={"name":"full name"},inplace=True))
+# print(df.replace("a","angel",inplace =True))
+# print(df["age"].mean())
+# print(df["age"].sum())
+# print(df["age"].max())
+# print(df["age"].min())
+
+
+
+
+# print(df.sort_values(by="age"))
+# print(df.sort_values(by="age",ascending=False))
+
+print(df.groupby('name')["age"].mean())
