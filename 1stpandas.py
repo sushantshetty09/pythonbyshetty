@@ -1,8 +1,8 @@
 import pandas as pd
-data={"name":["sushant","sanket"],
-      "age":[21,22],
-      "cgpa":[8.9,4]}
-df=pd.DataFrame(data)
+# data={"name":["sushant","sanket"],
+#       "age":[21,22],
+#       "cgpa":[8.9,4]}
+# df=pd.DataFrame(data)
 # print(df.name)
 # print(df.age)
 # # print(df.name,df.age)
@@ -31,4 +31,17 @@ df=pd.DataFrame(data)
 # print(df.sort_values(by="age"))
 # print(df.sort_values(by="age",ascending=False))
 
-print(df.groupby('name')["age"].mean())
+# print(df.groupby('name')["age"].mean())
+
+df1=pd.DataFrame({"id":[1,2],"names":["sushant","mahesh"]})
+df2=pd.DataFrame({'id':[1,2],"score":[10,90]})
+# merged=pd.merge(df1,df2)
+# print(merged)
+
+concatination=pd.concat([df1,df2],axis=0)
+# print(concatination)
+# print(concatination.isnull())
+# print(concatination.dropna())
+
+concatination=pd.concat([df1,df2],axis=1)
+print(concatination)
