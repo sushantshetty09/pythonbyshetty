@@ -1,17 +1,47 @@
 import pandas as pd
+# data={"name":["sushant","sanket"],
+#       "age":[21,22],
+#       "cgpa":[8.9,4]}
+# df=pd.DataFrame(data)
+# print(df.name)
+# print(df.age)
+# # print(df.name,df.age)
+# print(df.iloc[1])
+# print(df[0:2])
+# # print(df[:])
+# print(df[df['age']>20])
+# print(df[df['name']=='sanket'])
 
-# A pandas Series is like a column in a table. It is a one-dimensional array.
-print("--- Pandas Series ---")
-series_default_index = pd.Series([1,2,3,4,5])
-print("Series with default integer index:")
-print(series_default_index)
+# print(df.isnull())
 
-series_custom_index = pd.Series([1,2,3,4,5], index=["a","b","c","d","e"])
-print("\nSeries with custom string index:")
-print(series_custom_index)
+# print(df.dropna())
 
-# A DataFrame is a 2-dimensional data structure, like a table with rows and columns.
-print("\n--- Pandas DataFrame ---")
-data={'Name':["susha","sai","ram"],'Age':[21,22,23],'City':["hyd","bang","chennai"]}
-df=pd.DataFrame(data)
-print(df)
+# print(df.fillna(0))
+# print(df.rename(columns={"name":"full name"},inplace=True))
+
+# print(df.replace("a","angel",inplace =True))
+# print(df["age"].mean())
+# print(df["age"].sum())
+# print(df["age"].max())
+# print(df["age"].min())
+
+
+
+
+# print(df.sort_values(by="age"))
+# print(df.sort_values(by="age",ascending=False))
+
+# print(df.groupby('name')["age"].mean())
+
+df1=pd.DataFrame({"id":[1,2],"names":["sushant","mahesh"]})
+df2=pd.DataFrame({'id':[1,2],"score":[10,90]})
+# merged=pd.merge(df1,df2)
+# print(merged)
+
+concatination=pd.concat([df1,df2],axis=0)
+# print(concatination)
+# print(concatination.isnull())
+# print(concatination.dropna())
+
+concatination=pd.concat([df1,df2],axis=1)
+print(concatination)
